@@ -1,0 +1,7 @@
+resource_group = "timw-aks-rg"
+location       = "UK South"
+cluster_name   = "timw-aks-test"
+dns_prefix     = "timw-aks"
+ssh_public_key = "~/.ssh/id_rsa.pub"
+agent_count    = "3"
+vm_size        = "B2ms"

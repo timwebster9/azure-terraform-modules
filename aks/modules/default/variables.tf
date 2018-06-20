@@ -1,0 +1,9 @@
+variable "client_id" {}
+variable "client_secret" {}
+variable resource_group {}
+variable location {}
+variable cluster_name {}
+variable dns_prefix {}
+variable "ssh_public_key" {}
+variable agent_count {}
+variable vm_size {}
