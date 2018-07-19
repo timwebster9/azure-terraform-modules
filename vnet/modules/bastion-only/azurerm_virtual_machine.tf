@@ -26,6 +26,7 @@ resource "azurerm_virtual_machine" "bastion-vm" {
     computer_name               = "${var.bastion_hostname}"
     admin_username              = "${var.bastion_admin_username}"
     admin_password              = "${var.bastion_admin_password}"
+    custom_data                 = "${file("${path.module}/files/custom-data.sh")}"
   }
 
   os_profile_linux_config {

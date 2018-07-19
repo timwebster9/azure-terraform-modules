@@ -1,7 +1,7 @@
 resource "azurerm_network_security_group" "bastion_sg" {
   name                = "bastion-sg"
   location            = "${var.location}"
-  resource_group_name = "${data.azurerm_resource_group.rg.name}"
+  resource_group_name = "${azurerm_resource_group.rg.name}"
 
   security_rule {
     name                       = "ssh-sec-rule"
