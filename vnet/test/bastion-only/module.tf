@@ -1,0 +1,18 @@
+module "default" {
+    source                 = "../../modules/bastion-only"
+    resource_group_name    = "${var.resource_group_name}"
+    location               = "${var.location}"
+    vnet_name              = "${var.vnet_name}"
+    vnet_cidr              = "${var.vnet_cidr}"
+    bastion_subnet_name    = "${var.bastion_subnet_name}"
+    bastion_subnet_cidr    = "${var.bastion_subnet_cidr}"
+    jenkins_subnet_name    = "${var.jenkins_subnet_name}"
+    jenkins_subnet_cidr    = "${var.jenkins_subnet_cidr}"
+    aks_subnet_name        = "${var.aks_subnet_name}"
+    aks_subnet_cidr        = "${var.aks_subnet_cidr}"
+    bastion_vm_size        = "${var.bastion_vm_size}"
+    bastion_hostname       = "${var.bastion_hostname}"
+    bastion_admin_username = "${var.bastion_admin_username}"
+    bastion_admin_password = "${var.bastion_admin_password}"
+    ssh_public_key         = "${var.ssh_public_key}"
+}
