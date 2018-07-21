@@ -2,7 +2,7 @@
 
 RG_NAME=timw-aks-rg
 LOCATION=uksouth
-ZONE_NAME=deggymacets.com
+ZONE_NAME=private-zone.com
 ZONE_TYPE=Private
 RESOLUTION_VNETS=test-vnet
 
