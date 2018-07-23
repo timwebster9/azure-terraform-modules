@@ -9,6 +9,9 @@ echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ $AZ_REPO 
 curl -L https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
 
 sudo apt-get install apt-transport-https
-sudo apt-get update && sudo apt-get install azure-cli
+sudo apt-get update && sudo apt-get install azure-cli default-jdk
 
 sudo snap install kubectl --classic
+
+curl -fsSL get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
