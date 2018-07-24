@@ -8,3 +8,8 @@ variable "jenkins_subnet_name" {}
 variable "jenkins_subnet_cidr" {}
 variable "aks_subnet_name" {}
 variable "aks_subnet_cidr" {}
+variable "myip" {}
+
+
+
+

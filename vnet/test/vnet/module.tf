@@ -1,5 +1,5 @@
-module "default" {
-    source                 = "../../modules/empty"
+module "vnet" {
+    source                 = "../../modules/vnet"
     resource_group_name    = "${var.resource_group_name}"
     location               = "${var.location}"
     vnet_name              = "${var.vnet_name}"
@@ -10,4 +10,5 @@ module "default" {
     jenkins_subnet_cidr    = "${var.jenkins_subnet_cidr}"
     aks_subnet_name        = "${var.aks_subnet_name}"
     aks_subnet_cidr        = "${var.aks_subnet_cidr}"
+    myip                   = "${local.myip}"
 }
