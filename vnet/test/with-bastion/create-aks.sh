@@ -32,4 +32,5 @@ az aks create --resource-group $RG_NAME \
               --aad-server-app-id $SP_APP_ID \
               --aad-server-app-secret $SP_SECRET \
               --aad-client-app-id $SP_CLIENT_ID \
-              --aad-tenant-id $SP_TENANT_ID
+              --aad-tenant-id $SP_TENANT_ID \
+              --debug
