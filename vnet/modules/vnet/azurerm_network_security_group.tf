@@ -22,7 +22,7 @@ resource "azurerm_network_security_group" "bastion_sg" {
     access                     = "Allow"
     protocol                   = "Tcp"
     source_port_range          = "*"
-    destination_port_range     = "80"
+    destination_port_range     = "8080"
     source_address_prefix      = "${var.myip}"
     destination_address_prefix = "*"
   }
