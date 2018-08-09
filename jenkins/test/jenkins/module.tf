@@ -1,0 +1,15 @@
+module "default" {
+    source                 = "../../modules/jenkins"
+    resource_group_name    = "${var.resource_group_name}"
+    location               = "${var.location}"
+    vnet_name              = "${var.vnet_name}"
+    vnet_cidr              = "${var.vnet_cidr}"
+    jenkins_subnet_name    = "${var.jenkins_subnet_name}"
+    jenkins_subnet_cidr    = "${var.jenkins_subnet_cidr}"
+    jenkins_vm_size        = "${var.jenkins_vm_size}"
+    jenkins_hostname       = "${var.jenkins_hostname}"
+    admin_username         = "${var.admin_username}"
+    ssh_public_key         = "${var.ssh_public_key}"
+    myip                   = "${local.myip}"
+    storage_account_name   = "${var.storage_account_name}"
+}

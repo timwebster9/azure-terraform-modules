@@ -1,0 +1,35 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: devteam1
+---
+kind: Role
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: devteam1-role
+  namespace: devteam1
+rules:
+- apiGroups: ["apps"]
+  resources: ["deployments"]
+  verbs: ["get", "list", "watch", "create", "update", "patch", "delete"]
+- apiGroups: ["extensions"]
+  resources: ["deployments", "replicasets", "ingresses"]
+  verbs: ["get", "list", "watch", "create", "update", "patch", "delete"]
+- apiGroups: [""]
+  resources: ["pods", "pods/exec", "pods/log", "services"]
+  verbs: ["get", "list", "watch", "create", "update", "patch", "delete"]
+---
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: devteam1-rolebinding
+subjects:
+- kind: User
+  name: 7a25a4c9-28a7-47f3-8db6-9f03527d3c46
+  namespace: devteam1
+roleRef:
+  kind: Role
+  name: devteam1-role 
+  apiGroup: rbac.authorization.k8s.io
+---
